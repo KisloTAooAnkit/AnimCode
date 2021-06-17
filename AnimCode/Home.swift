@@ -9,23 +9,43 @@ import SwiftUI
 
 struct Home: View {
     
-    var menu = menuData
+    
+    @State var show = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ForEach(menu) { item in
-                MenuRow(image: item.icon, text: item.title)
+        ZStack {
+            ZStack(alignment : .topLeading) {
+                Button(action: {self.show.toggle()}) {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "list.dash")
+                            .foregroundColor(.black)
+                    }
+                    .padding(.trailing,20)
+                    .frame(width: 90, height: 60, alignment: .center)
+                    .background(Color.white)
+                    .cornerRadius(30)
+                    .shadow(color: Color("buttonShadow"), radius: 10, x: 0.0, y: 10)
+                }
+                Spacer()
             }
-            Spacer()
+            ZStack(alignment : .topTrailing) {
+                Button(action: {self.show.toggle()}) {
+                    HStack {
+                        Image(systemName: "person.crop.circle")
+                            .foregroundColor(.black)
+                    }
+                    .frame(width: 44, height: 44, alignment: .center)
+                    .background(Color.white)
+                    .cornerRadius(30)
+                    .shadow(color: Color("buttonShadow"), radius: 10, x: 0.0, y: 10)
+                }
+                Spacer()
+            }
+            
+            
+            MenuView(show: $show)
         }
-        .padding(.top,20)
-        .padding(30)
-        .frame(minWidth : 0 , maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(30)
-        .padding(.trailing,60)
-        .shadow(radius: 20
-        )
     }
 }
 
@@ -68,3 +88,33 @@ let menuData = [
     Menu(title: "SignOut", icon: "arrow.uturn.down")
     
 ]
+
+
+struct MenuView: View {
+    var menu = menuData
+    @Binding var show : Bool
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            ForEach(menu) { item in
+                MenuRow(image: item.icon, text: item.title)
+            }
+            Spacer()
+        }
+        .padding(.top,20)
+        .padding(30)
+        .frame(minWidth : 0 , maxWidth: .infinity)
+        .background(Color.white)
+        .cornerRadius(30)
+        .padding(.trailing,60)
+        .shadow(radius: 20)
+        .rotation3DEffect(
+            (Angle(degrees: show ? 0 : 30)),
+            axis: (x: 0.0, y: 1.0, z: 0.0)
+        )
+        .animation(.easeIn)
+        .offset(x: show ? 0 :-UIScreen.main.bounds.width)
+        .onTapGesture {
+            self.show.toggle()
+        }
+    }
+}
