@@ -11,37 +11,30 @@ struct Home: View {
     
     
     @State var show = false
+    @State var showProfile = false
     
     var body: some View {
         ZStack {
-            ZStack(alignment : .topLeading) {
-                Button(action: {self.show.toggle()}) {
-                    HStack {
-                        Spacer()
-                        Image(systemName: "list.dash")
-                            .foregroundColor(.black)
-                    }
-                    .padding(.trailing,20)
-                    .frame(width: 90, height: 60, alignment: .center)
-                    .background(Color.white)
-                    .cornerRadius(30)
-                    .shadow(color: Color("buttonShadow"), radius: 10, x: 0.0, y: 10)
-                }
-                Spacer()
-            }
-            ZStack(alignment : .topTrailing) {
-                Button(action: {self.show.toggle()}) {
-                    HStack {
-                        Image(systemName: "person.crop.circle")
-                            .foregroundColor(.black)
-                    }
-                    .frame(width: 44, height: 44, alignment: .center)
-                    .background(Color.white)
-                    .cornerRadius(30)
-                    .shadow(color: Color("buttonShadow"), radius: 10, x: 0.0, y: 10)
-                }
-                Spacer()
-            }
+
+            HomeList()
+                .blur(radius: show ? 10 : 0)
+                .scaleEffect(showProfile ? 0.95 : 1)
+                .animation(.default)
+            
+            ContentView()
+                
+                .cornerRadius(30)
+                .shadow(radius: 20)
+                .animation(.spring())
+                .offset(y: showProfile ? 40 : UIScreen.main.bounds.height)
+            
+            MenuButton(show: $show)
+                .offset(x:-30 ,y: showProfile ? 0 : 80)
+                .animation(.easeIn)
+            
+            MenuRight(show: $showProfile)
+                .offset(x:-10 ,y:showProfile ? 0 : 88)
+                .animation(.easeIn)
             
             
             MenuView(show: $show)
@@ -115,6 +108,69 @@ struct MenuView: View {
         .offset(x: show ? 0 :-UIScreen.main.bounds.width)
         .onTapGesture {
             self.show.toggle()
+        }
+    }
+}
+
+struct CircleButton: View {
+    
+    var iconName : String = "person.crop.circle"
+    
+    var body: some View {
+        HStack {
+            Image(systemName: iconName)
+                .foregroundColor(.black)
+        }
+        .frame(width: 44, height: 44, alignment: .center)
+        .background(Color.white)
+        .cornerRadius(30)
+        .shadow(color: Color("buttonShadow"), radius: 10, x: 0.0, y: 10)
+    }
+}
+
+struct MenuButton: View {
+    @Binding var show : Bool
+    var body: some View {
+        HStack {
+            VStack
+            {
+                Button(action: {self.show.toggle()}) {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "list.dash")
+                            .foregroundColor(.black)
+                    }
+                    .padding(.trailing,20)
+                    .frame(width: 90, height: 60, alignment: .center)
+                    .background(Color.white)
+                    .cornerRadius(30)
+                    .shadow(color: Color("buttonShadow"), radius: 10, x: 0.0, y: 10)
+                }
+                Spacer()
+            }
+            Spacer()
+        }
+    }
+}
+
+struct MenuRight: View {
+    @Binding var show : Bool
+    var body: some View {
+        HStack {
+            Spacer()
+            VStack
+            {
+                HStack {
+                    Button(action: {self.show.toggle()}) {
+                        CircleButton(iconName: "person.crop.circle")
+                        
+                    }
+                    Button(action: {self.show.toggle()}) {
+                        CircleButton(iconName: "bell")
+                    }
+                }
+                Spacer()
+            }
         }
     }
 }
