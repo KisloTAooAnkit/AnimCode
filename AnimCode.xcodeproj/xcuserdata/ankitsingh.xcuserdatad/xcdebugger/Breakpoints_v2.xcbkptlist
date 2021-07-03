@@ -3,4 +3,129 @@
    uuid = "744F8D2E-7C83-4E81-AD51-062BE8BD2C98"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimCode/HomeList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "HomeList"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - 31e46f34a7b2091b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of AnimCode.HomeList.showModelView : Swift.Bool"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/AnimCode/HomeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - 534f1c14b3e07831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimCode.HomeList.showModelView.getter : Swift.Bool"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/AnimCode/HomeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - 8b58f4bba6d41cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimCode.HomeList.showModelView.setter : Swift.Bool"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/AnimCode/HomeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - 4cf84fab8fb5efc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimCode.HomeList.showModelView.modify : Swift.Bool"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - 1e3bdd2771d39dcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimCode.HomeList.showModelView.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/AnimCode/HomeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - 88f8937cceb2afd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimCode.HomeList.$showModelView.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/AnimCode/HomeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  uuid = "7817EDB8-18B8-4245-ABC2-C41B12BFC980 - c575eddb7bcaaa7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimCode.HomeList.init() -&gt; AnimCode.HomeList"
+                  moduleName = "AnimCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/AnimCode/AnimCode/HomeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
